@@ -1,7 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const blogRoutes = require('./routes/blogRoutes');
+const questRoutes = require('./routes/questRoutes');
+require("dotenv").config();
+const main = ('./main');
 
 // express app
 const app = express();
@@ -9,9 +11,9 @@ const app = express();
 // connect to mongodb
 mongoose.set('strictQuery', false);
 
-const dbURI = 'mongodb+srv://Joshua:Ps7d1dlN0502y4sL@cluster0.r96fjuf.mongodb.net/Blog-post?retryWrites=true&w=majority'
+const dbURI = process.env.URI 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-.then((result) => app.listen(3000))
+.then((result) => app.listen(4000))
 .catch((err) => console.log(err));
 
 // register view engine
@@ -23,15 +25,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 // blog routes
-app.use('/blogs',blogRoutes);
+app.use('/quests',questRoutes);
 
 // routes
+/*
 app.get('/about', (req, res) => {
     res.render('about', { title: 'About' });
 });
+*/
 
 app.get('/', (req, res) => {
-    res.redirect('/blogs');
+    res.redirect('/quests');
 });
 
 
@@ -41,3 +45,5 @@ app.get('/', (req, res) => {
 app.use((req, res) => {
 res.status(404).render('404',  { title: '404' });
 })
+
+
