@@ -2,7 +2,7 @@
     sidebar {
         position: fixed;
         transition: 1000ms;
-        left: -55%;
+        left: -60%;
         z-index: 1;
     }
 
