@@ -3,7 +3,6 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const questRoutes = require('./routes/questRoutes');
 require("dotenv").config();
-const main = ('./main');
 
 // express app
 const app = express();
