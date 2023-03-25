@@ -35,6 +35,7 @@
     }
 
     .mini-bar {
+        display: none;
         max-width: none;
     }
 }
