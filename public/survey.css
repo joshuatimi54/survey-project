@@ -44,3 +44,10 @@ textarea {
     overflow-wrap: break-word;
     height: 100px;
 }
+
+.overflow-y {
+    max-width: 600px;
+    height: 65vh;
+    overflow-y: auto;
+    padding-left: 0rem;
+}

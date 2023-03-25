@@ -71,7 +71,7 @@ sidebar {
 }
 
 .showbar {
-    display: block;
+    display: none;
 }
 
 /* create styles */
