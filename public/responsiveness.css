@@ -1,0 +1,40 @@
+@media only screen and (max-width: 990px) {
+    sidebar {
+        position: fixed;
+        transition: 1000ms;
+        left: -60%;
+        z-index: 1;
+    }
+
+    .show-hide {
+        left: 0%;
+    }
+
+    .showbar {
+        display: block;
+        margin-top: 12px;
+        right: 15px;
+        position: absolute;
+        text-align: center;
+        color: white;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 3px;
+        padding: 8px;
+    }
+
+    .icon-bar {
+        display: block;
+        background-color: white;
+        width: 25px;
+        height: 3px;
+    }
+
+    .icon-bar:nth-child(2) {
+        margin: 2px 0px 2px 0px;
+    }
+
+    .mini-bar {
+        max-width: none;
+    }
+}

@@ -1,0 +1,100 @@
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <div class="d-flex">
+
+      <rightbar class="container">
+        <div
+          class="d-flex p-5 mt-2 mb-3 justify-content-between bg-white rounded"
+        >
+          <h1>Survey question</h1>
+        </div>
+        <div class="quest-block ">
+          <div class="add-quest">
+            <form
+              class="mb-2 p-3 bg-white rounded"
+              action="/users"
+              method="post"
+            >
+              <label for="name">Name</label>
+              <input
+                class="border-0 rounded bg-light"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="(first name) (last name)"
+                required
+              />
+              <label for="email">Email</label>
+              <input
+                class="border-0 rounded bg-light"
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="additional-name"
+                placeholder="example@gmail.com"
+                required
+              />
+              <hr />
+
+              <div class="">
+                <h5 class="p-2 text-white bg-primary rounded">
+                  Pls input your responsive
+                </h5>
+
+                <div class="mb-2 bg-white rounded">
+                  <h5>Question 1</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question"
+                    id="question"
+                    readonly
+                  >Will you consider Graphic Design an essential skill for Students to have financial freedom?, If yes why?</textarea>
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer"
+                      id="answer"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+                  <h5>Question 2</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question"
+                    id="question"
+                    readonly
+                  >Will you consider Graphic Design an essential skill for Students to have financial freedom?, If yes why?
+                </textarea
+                  >
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer"
+                      id="answer"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </rightbar>
+    </div>
+  </body>
+</html>

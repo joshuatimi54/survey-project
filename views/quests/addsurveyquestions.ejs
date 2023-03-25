@@ -1,0 +1,93 @@
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <div class="d-flex">
+      <%- include('../partials/header.ejs') %>
+        <%- include('../partials/nav.ejs') %>
+
+    <rightbar class="container">
+        <div
+          class="d-flex p-5 mt-2 mb-3 justify-content-between bg-white rounded"
+        >
+          <h1>Survey question</h1>
+          <a
+            href="/quests/addsurveyquestions"
+            ><button class="btn btn-primary">Add question</button></a
+          >
+        </div>
+        <div class="quest-block d-sm-flex">
+          <div class="add-quest">
+            <form
+              class="mb-2 p-3 bg-white rounded"
+              action="/quests"
+              method="post"
+            >
+              <h4>Add new question the survey</h4>
+              <label for="title">Question:</label>
+              <input
+                type="text"
+                name="question"
+                id="question"
+                placeholder="Type question here"
+                required
+              />
+
+              <!--
+              <label for="option">Option 1</label>
+              <input
+                type="text"
+                name="option1"
+                id="option1"
+                autocomplete="additional-name"
+                placeholder="Type option here"
+                disabled
+              />
+              <label for="option">Option 2</label>
+              <input
+                type="text"
+                name="option2"
+                id="option2"
+                autocomplete="additional-name"
+                placeholder="Type option here"
+                disabled
+              />
+              <label for="option">Option 3</label>
+              <input
+                type="text"
+                name="option3"
+                id="option3"
+                autocomplete="additional-name"
+                placeholder="Type option here"
+                disabled
+              />
+              <label for="option">Option 4</label>
+              <input
+                type="text"
+                name="option4"
+                id="option4"
+                autocomplete="additional-name"
+                placeholder="Type option here"
+                disabled
+              />
+              <label for="option">Option 5</label>
+              <input
+                type="text"
+                name="option5"
+                id="option5"
+                autocomplete="additional-name"
+                placeholder="Type option here"
+                disabled
+              />
+
+              -->
+              
+              <button class="btn btn-primary">Add Question</button>
+            </form>
+          </div>
+          <%- include('../partials/minibar.ejs') %>
+        </div>
+      </rightbar>
+    </div>
+
+  </body>
+</html>

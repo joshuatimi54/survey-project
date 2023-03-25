@@ -1,0 +1,43 @@
+<footer>
+    <script>
+        const h = document.querySelector("#home");
+        const s = document.querySelector("#survey");
+        const a = document.querySelector("#answer");
+        const u = document.querySelector("#users");
+        const p = document.querySelector("#page");
+        const all = document.querySelector(".allli");
+
+       h.onclick = function () {
+        all.classList.remove("active");
+        h.classList.add("active");
+      };
+
+      s.onclick = function () {
+        all.classList.remove("active");
+        // s.classList.add("active");
+      };
+
+      a.onclick = function () {
+        all.classList.remove("active");
+        a.classList.add("active");
+      };
+
+      u.onclick = function () {
+        all.classList.remove("active");
+        u.classList.add("active");
+      };
+
+      p.onclick = function () {
+        all.classList.remove("active");
+        p.classList.add("active");
+      }
+
+
+$(document).ready(function(){
+  $(".showbar").click(function(){
+    $("sidebar").toggleClass("show-hide");
+  });
+});
+    </script>
+    Copyright &copy; Blog Joshua 2022
+</footer>

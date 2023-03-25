@@ -1,0 +1,36 @@
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+
+    <div class="d-flex">
+      <%- include('../partials/header.ejs') %>
+      <%- include('../partials/nav.ejs') %>
+
+      <rightbar class="container">
+        <div class="d-flex p-5 mt-2 mb-3 justify-content-between bg-white rounded">
+          <h1>Home | Dashboard</h1>
+          <a
+            href="/"
+            ><button class="btn btn-primary">About the app</button></a
+          >
+        </div>
+        <div class="quest-block d-sm-flex">
+          <div class="quest-part">
+            <div class="mb-2 p-3 bg-white rounded">
+              <h5>People in charge of this project are</h5>
+              <ol class="row justify-content-between">
+                <li class="mb-3">Adewale Tomiwa</li>
+                <li class="mb-3">Akinmolayan Elizabeth</li>
+                <li class="mb-3">Adesoba Joshua</li>
+                <li class="mb-3">Adeleye Ifeoluwa</li>
+                <li>Raheem Oluwafisayo</li>
+              </ol>
+            </div>
+          </div>
+          <%- include('../partials/minibar.ejs') %>
+        </div>
+      </rightbar>
+    </div>
+
+  </body>
+</html>

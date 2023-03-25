@@ -1,0 +1,251 @@
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <div class="d-flex">
+
+      <rightbar class="container">
+        <div
+          class="d-flex p-5 mt-2 mb-3 justify-content-between bg-white rounded"
+        >
+          <h1>Survey question</h1>
+        </div>
+        <div class="quest-block ">
+          <div class="add-quest">
+            <form
+              class="mb-2 p-3 bg-white rounded"
+              action="/users"
+              method="post"
+            >
+              <label for="name">Name</label>
+              <input
+                class="border-0 rounded bg-light"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="(first name) (last name)"
+                required
+              />
+              <label for="email">Email</label>
+              <input
+                class="border-0 rounded bg-light"
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="additional-name"
+                placeholder="example@gmail.com"
+                required
+              />
+              <hr />
+
+              <div class="">
+                <h5 class="p-2 text-white bg-primary rounded">
+                  Pls input your responsive
+                </h5>
+
+                <div class="mb-2 bg-white rounded">
+
+                  <h5>Question 1</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question1"
+                    id="question1"
+                    readonly
+                  >Will you consider Graphic Design an essential skill for Students to have financial freedom?, If yes why?</textarea>
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer1"
+                      id="answer1"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+
+                  <h5>Question 2</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question2"
+                    id="question2"
+                    readonly
+                  >What are some of the challenges you've faced been a Graphic Designer?
+                    </textarea
+                  >
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer2"
+                      id="answer2"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+
+                  
+
+                  <h5>Question 3</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question4"
+                    id="question4"
+                    readonly
+                  >How long does it take to learn this skill?</textarea>
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer4"
+                      id="answer4"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+
+                  <h5>Question 4</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question5"
+                    id="question5"
+                    readonly
+                  >How were you able to learn the skill ( online course / physical training) ?</textarea>
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer5"
+                      id="answer5"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+
+                 
+
+                  <h5>Question 5</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question7"
+                    id="question7"
+                    readonly
+                  >How has Graphic design be of help to you as a student Towards gaining financial freedom?</textarea>
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer7"
+                      id="answer7"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+
+                  
+
+
+
+                  <h5>Question 6</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question11"
+                    id="question11"
+                    readonly
+                  >Do you think that graphics design is an employable skill in this century?</textarea>
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer11"
+                      id="answer11"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+
+                  <h5>Question 7</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question12"
+                    id="question12"
+                    readonly
+                  >You are an industrial design student, how has your understanding of graphics design help you with your course of study?</textarea>
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer12"
+                      id="answer12"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+
+                  <h5>Question 8</h5>
+                  <textarea
+                    class="border-0 rounded"
+                    type="text"
+                    name="question13"
+                    id="question13"
+                    readonly
+                  >How has graphics evolved digitally compared to what it was in the past?</textarea>
+                  <div
+                    class="align-content-center d-flex justify-content-between"
+                  >
+                    <input
+                      class="border-0 rounded bg-light"
+                      type="text"
+                      id="html"
+                      name="answer13"
+                      id="answer13"
+                      placeholder="Answer"
+                      required
+                    />
+                  </div>
+
+
+
+                  
+
+                   <h5
+                   class="mt-2 p-2 rounded text-white bg-secondary"
+                   >Thank you for your time and response</h5>
+
+                </div>
+              </div>
+
+              <button class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </rightbar>
+    </div>
+  </body>
+</html>

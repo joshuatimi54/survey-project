@@ -1,0 +1,46 @@
+.quest-block {
+    gap: 20px;
+}
+
+.quest-part {
+    flex: 60%;
+    height: 65vh;
+    overflow-y: auto;
+}
+
+.mini-bar {
+    flex: 30%;
+    max-width: 250px;
+    height: 65vh;
+}
+
+/* Add-question */
+
+.add-quest {
+    margin: auto;
+    height: 65vh;
+    overflow-y: auto;
+}
+
+.add-quest form {
+    max-width: 500px;
+}
+
+.add-quest input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.add-quest label {
+    display: block;
+    margin-top: 24px;
+}
+
+textarea {
+    font-size: small;
+    width: 100%;
+    overflow-wrap: break-word;
+    height: 100px;
+}
