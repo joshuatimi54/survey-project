@@ -12,13 +12,12 @@
           <h3>Result for user : <%= user._id %></h3>
           <h5><%= user.username %></h5>
           <h6><%= user.email %></h6>
-          <a class="delete" data-doc="<%= user._id %>"> delete </a>
+          <a class=" btn delete" data-doc="<%= user._id %>"> delete </a>
         </div>
         <div class="quest-block d-sm-flex">
           <div class="quest-part">
 
-            <% if (users.length > 0) { %> <% users.forEach(user => { %>
-           
+            
             <h5>Questions and response</h5>
             <ol>
                 <li>
@@ -33,9 +32,6 @@
                 </li>
             </ol>
 
-            <% }) %> <% } else { %>
-            <p>There are no response for this user</p>
-            <% } %>
 
           </div>
           <%- include('../partials/minibar.ejs') %>

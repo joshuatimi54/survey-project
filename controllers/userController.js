@@ -32,14 +32,13 @@ const user_testedusers_get = (_req, res) => {
 // user_usersurvey
 const user_usersurvey_get = (req, res) => {
     const id = req.params.id;
-
-   User.findById(id)
+    User.findById(id)
     .then(result => {
-        res.render('quests/usersurvey', { title: 'Result for individual survey', users: result  });
+        res.render('quests/usersurvey', { user: result, title: 'Blog Details' });
     })
     .catch((err) => {
         console.log(err);
-    })
+    });
 }
 
 
