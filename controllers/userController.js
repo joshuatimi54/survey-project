@@ -34,7 +34,7 @@ const user_usersurvey_get = (req, res) => {
     const id = req.params.id;
     User.findById(id)
     .then(result => {
-        res.render('quests/usersurvey', { user: result, title: 'Blog Details' });
+        res.render('quests/usersurvey', { user: result, title: 'Result for individual survey' });
     })
     .catch((err) => {
         console.log(err);
@@ -48,7 +48,7 @@ const user_delete = (req, res) => {
 
     User.findByIdAndDelete(id)
     .then(_result => {
-        res.json({ redirect: '/quests/testedusers' });
+        res.json({ redirect: '/users/testedusers' });
     })
     .catch(err => {
         console.log(err);

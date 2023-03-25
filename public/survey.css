@@ -46,7 +46,7 @@ textarea {
 }
 
 .overflow-y {
-    max-width: 600px;
+    max-width: 800px;
     height: 65vh;
     overflow-y: auto;
     padding-left: 0rem;
