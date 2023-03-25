@@ -20,7 +20,7 @@ const user_testpage = (req, res) => {
 
 // user_testedusers
 const user_testedusers_get = (_req, res) => {
-   User.find().count({ createdAt: -1 })
+   User.find().sort({ createdAt: -1 })
     .then((result) => {
         res.render('quests/testedusers', { title: 'Result for survey', users: result  });
     })
