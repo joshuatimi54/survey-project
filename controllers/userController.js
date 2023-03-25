@@ -2,7 +2,8 @@ const User = require('../models/user');
 
 // user_testpage
 const user_testpage_get = (_req, res) => {
-    res.render('quests/testpage', { title: 'Answer the questions' });
+    // res.render('quests/testpage', { title: 'Answer the questions' });
+    res.status(404).render('404',  { title: '404' });
 }
 
 // user_testpage
