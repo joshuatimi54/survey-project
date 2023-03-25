@@ -2,61 +2,45 @@
   <%- include('../partials/head.ejs') %>
   <body>
     <div class="d-flex">
-      <%- include('../partials/header.ejs') %>
-        <%- include('../partials/nav.ejs') %>
+      <%- include('../partials/header.ejs') %> <%-
+      include('../partials/nav.ejs') %>
 
-    <div class="rightbar container">
-      <div
-        class="d-flex p-5 mt-2 mb-3 justify-content-between bg-white rounded"
-      >
-        <h1>Survey question</h1>
-        <a
-          href="/quests/addsurveyquestions"
-          ><button class="btn btn-primary">Add question</button></a
+      <div class="rightbar container">
+        <div
+          class="d-flex p-5 mt-2 mb-3 justify-content-between bg-white rounded"
         >
-      </div>
-      <div class="quest-block d-sm-flex">
-        <div class="quest-part">
+          <h1>Survey question</h1>
+          <a href="/quests/addsurveyquestions"
+            ><button class="btn btn-primary">Add question</button></a
+          >
+        </div>
+        <div class="quest-block d-sm-flex">
+          <div class="quest-part">
+            <% if (quests.length > 0) { %> <% quests.forEach(quest => { %>
 
-          <% if (quests.length > 0) { %>
-        <% quests.forEach(quest => { %> 
-            
             <div class="mb-2 p-3 bg-white rounded">
-            <h5><%= quest.question %></h5>
-            <!--
-            <ol class="d-sm-flex justify-content-between">
-              <li><%= quest.option1 %></li>
-              <li><%= quest.option2 %></li>
-              <li><%= quest.option3 %></li>
-              <li><%= quest.option4 %></li>
-              <li><%= quest.option5 %></li>
-            </ol>
-            -->
-            <div>
-          <a class="delete" data-doc="<%= quest._id %>"> delete </a>
-        </div>
+              <h5><%= quest.question %></h5>
+              <div>
+                <a class="delete" data-doc="<%= quest._id %>"> delete </a>
+              </div>
+            </div>
+            <% }) %> <% } else { %>
+            <p>There are no question to display...</p>
+            <% } %>
           </div>
-            <% }) %> 
-     <% } else { %>
-        <p>There are no question to display...</p>
-        <% } %> 
-
+          <%- include('../partials/minibar.ejs') %>
         </div>
-        <%- include('../partials/minibar.ejs') %>
       </div>
     </div>
-    </div>
 
+    <script>
+      const trashcan = document.querySelector("a.delete");
 
-
-     <script>
-      const trashcan = document.querySelector('a.delete');
-
-      trashcan.addEventListener('click', (e) => {
+      trashcan.addEventListener("click", (e) => {
         const endpoint = `/quests/${trashcan.dataset.doc}`;
 
         fetch(endpoint, {
-          method: 'DELETE',
+          method: "DELETE",
         })
           .then((response) => response.json())
           .then((data) => (window.location.href = data.redirect))

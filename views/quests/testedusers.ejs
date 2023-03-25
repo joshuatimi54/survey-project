@@ -1,0 +1,34 @@
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <div class="d-flex">
+      <%- include('../partials/header.ejs') %> <%-
+      include('../partials/nav.ejs') %>
+
+      <div class="rightbar container">
+        <div
+          class="d-flex p-5 mt-2 mb-3 justify-content-between bg-white rounded"
+        >
+          <h1>Result for tested users</h1>
+        </div>
+        <div class="quest-block d-sm-flex">
+          <div class="quest-part">
+            <% if (users.length > 0) { %> <% users.forEach(user => { %>
+
+            <a href="/users/<%= user._id %> " class="single">
+              <div class="mb-2 p-3 bg-white rounded">
+                <h5><%= user.username %></h5>
+                <h6><%= user.email %></h6>
+              </div>
+            </a>
+
+            <% }) %> <% } else { %>
+            <p>There are no Result to display...</p>
+            <% } %>
+          </div>
+          <%- include('../partials/minibar.ejs') %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

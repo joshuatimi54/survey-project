@@ -1,0 +1,61 @@
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <div class="d-flex">
+      <%- include('../partials/header.ejs') %> <%-
+      include('../partials/nav.ejs') %>
+
+      <div class="rightbar container">
+        <div
+          class="row p-5 mt-2 mb-3 bg-white rounded"
+        >
+          <h3>Result for user : <%= user._id %></h3>
+          <h5><%= user.username %></h5>
+          <h6><%= user.email %></h6>
+          <a class="delete" data-doc="<%= user._id %>"> delete </a>
+        </div>
+        <div class="quest-block d-sm-flex">
+          <div class="quest-part">
+
+            <% if (users.length > 0) { %> <% users.forEach(user => { %>
+           
+            <h5>Questions and response</h5>
+            <ol>
+                <li>
+                    <p>
+                        <label for="question">question</label>
+                        <%= user.question1 %>
+                    </p>
+                    <p>
+                        <label for="response">response</label>
+                        <%= user.answer1 %>
+                    </p>
+                </li>
+            </ol>
+
+            <% }) %> <% } else { %>
+            <p>There are no response for this user</p>
+            <% } %>
+
+          </div>
+          <%- include('../partials/minibar.ejs') %>
+        </div>
+      </div>
+
+      <script>
+      const trashcan = document.querySelector('a.delete');
+
+      trashcan.addEventListener('click', (e) => {
+        const endpoint = `/quests/${trashcan.dataset.doc}`;
+
+        fetch(endpoint, {
+          method: 'DELETE',
+        })
+          .then((response) => response.json())
+          .then((data) => (window.location.href = data.redirect))
+          .catch((err = console.log(err)));
+      });
+    </script>
+    </div>
+  </body>
+</html>
