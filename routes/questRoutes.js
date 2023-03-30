@@ -3,7 +3,7 @@ const questController = require('../controllers/questController');
 
 const router = express.Router();
 
-router.get('/', questController.quest_index);
+router.get('/home', questController.quest_index);
 router.post('/', questController.quest_create_question);
 router.get('/addsurveyquestions', questController.quest_create_get);
 router.get('/surveyquestions', questController.quest_surveyquestions);

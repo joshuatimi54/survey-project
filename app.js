@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const questRoutes = require('./routes/questRoutes');
 const userRoutes = require('./routes/userRoutes');
+const authRoutes = require('./routes/authRoutes');
 require("dotenv").config();
 
 // express app
@@ -24,9 +25,10 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
-// blog routes
+// survey routes
 app.use('/quests',questRoutes);
 app.use('/users',userRoutes);
+app.use('/auths',authRoutes);
 
 
 // routes
@@ -35,11 +37,11 @@ app.get('/about', (req, res) => {
     res.render('about', { title: 'About' });
 });
 */
-
-app.get('/', (req, res) => {
-    res.redirect('/quests');
+// redirect
+/* app.get('/', (req, res) => {
+    res.redirect('/auth');
 });
-
+*/
 
 //404 page
 app.use((req, res) => {
